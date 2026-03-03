@@ -1,0 +1,33 @@
+This is a list of my pending tasks.
+
+1. file structuring improvements
+    - create folders, move files one-by-one ensuring all dependencies are updated
+2. improve UI
+    - loading screens
+    - landing page
+    - colours (maybe all black)
+    - i want to add a small header row to the top of the app, showing a small logo in the top left. 
+        the title of the app should be written in this header bar
+
+3. Reasses criteria for high, medium, low impact
+    add impact filters
+4. reasses key words for Categories
+5. LLM usage:
+    can we get other criteria from LLM (eg. category / severity)
+    can we start plotting trends?
+
+Project forks:
+1. project fork - Dell refined version
+2. project fork - Financial disruption version 
+    oil price
+    stocks
+    Etc.
+
+
+
+Notes on the Blog post:
+
+Difficulties:
+- pulling the right news - key words
+- Impact assessment - how to do it?
+- using LLMs for the summaries

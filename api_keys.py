@@ -1,0 +1,3 @@
+# API Keys Configuration
+NEWSAPI_KEY = '41b9953990d945e798647208dd8d6ee8'
+GEMINI_API_KEY = 'AIzaSyD0t_g1P4qYfvYOeoPfYfujYsxga9Sf4Y4'
