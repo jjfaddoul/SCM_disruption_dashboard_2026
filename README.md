@@ -29,33 +29,66 @@ A comprehensive Streamlit dashboard that monitors and analyzes global supply cha
 
 ### Prerequisites
 - Python 3.8+
-- NewsAPI account (free tier available)
-- Optional: OpenAI API key for enhanced analysis
+- NewsAPI account (free tier available at https://newsapi.org)
+- Google Generative AI account (for Gemini API at https://ai.google.dev)
+- Git installed
 
-### Setup
+### Setup for Local Development
+
 1. **Clone the repository**
    ```bash
    git clone https://github.com/yourusername/Supply_Chain_Disruption_Dashboard.git
    cd Supply_Chain_Disruption_Dashboard
    ```
 
-2. **Install dependencies**
+2. **Create a Python virtual environment**
+   ```bash
+   python -m venv .venv
+   source .venv/bin/activate  # On Windows: .venv\Scripts\activate
+   ```
+
+3. **Install dependencies**
    ```bash
    pip install -r requirements.txt
-   python -m spacy download en_core_web_sm
    ```
 
-3. **Configure API keys**
+4. **Set up API keys for local development**
    ```bash
-   # Create api_keys.py file
-   echo "NEWSAPI_KEY = 'your_newsapi_key_here'" > api_keys.py
-   echo "OPENAI_API_KEY = 'your_openai_key_here'" >> api_keys.py  # Optional
+   # Copy the example .env file
+   cp .env.example .env
+   
+   # Edit .env and add your API keys
+   # NEWSAPI_KEY=your_newsapi_key_here
+   # GEMINI_API_KEY=your_gemini_api_key_here
    ```
 
-4. **Run the dashboard**
+5. **Run the dashboard**
    ```bash
    streamlit run app.py
    ```
+
+### ⚠️ Important: API Keys Security
+
+**NEVER** commit your API keys to version control! This project uses:
+
+- **Local Development**: Environment variables loaded from `.env` file
+- **Streamlit Cloud**: Streamlit secrets management
+- `.env` and `api_keys.py` are excluded via `.gitignore`
+
+#### For Streamlit Cloud Deployment
+
+1. Push your code to GitHub (without `.env` or `api_keys.py`)
+2. Go to [Streamlit Cloud](https://share.streamlit.io)
+3. Click "New app" and connect your GitHub repository
+4. In the "Advanced settings", add your secrets:
+   ```
+   [secrets]
+   NEWSAPI_KEY = "your_newsapi_key_here"
+   GEMINI_API_KEY = "your_gemini_api_key_here"
+   ```
+5. Deploy!
+
+Your API keys will be securely stored on Streamlit Cloud and never exposed in source code.
 
 ## 📋 Requirements
 

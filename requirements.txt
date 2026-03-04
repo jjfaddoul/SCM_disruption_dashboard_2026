@@ -3,3 +3,4 @@ requests
 datetime
 google-generativeai
 plotly
+python-dotenv

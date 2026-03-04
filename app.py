@@ -8,6 +8,10 @@ from datetime import datetime
 import os
 import plotly.graph_objects as go
 import json
+from dotenv import load_dotenv
+
+# Load environment variables from .env file (for local development)
+load_dotenv()
 
 # Custom CSS for the settings popup and tooltips
 st.markdown("""
